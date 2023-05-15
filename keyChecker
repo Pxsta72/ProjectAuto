@@ -3,7 +3,7 @@ local data = {
     key = nil
 }
 
-function data.checkVersion()
+function data.checkKey()
     if data.userKey ~= data.key then
         game:GetService("Players").LocalPlayer:Kick("incorrect or missing key, join our discord for beta - auto.projectbot.top")
     end
