@@ -1,0 +1,15 @@
+local data = {
+    version = nil
+}
+
+local latestVersion = ""
+local latestBeta = ""
+local latestPrivateBeta = "0.1 beta"
+
+function data.checkVersion()
+    if data.version ~= latestVersion and data.version ~= latestBeta and data.version ~= latestPrivateBeta then
+        game:GetService("Players").LocalPlayer:Kick("you are using an outdated version of Project Bot, join our discord for the latest version - jailbreak.projectbot.top")
+    end
+end
+
+return data
