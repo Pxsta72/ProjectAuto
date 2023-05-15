@@ -1,0 +1,10 @@
+BannedPlayers = {
+	"Banned Name",
+	"Banned Name"
+}
+
+for i,v in pairs(BannedPlayers) do
+	if v == game:GetService("Players").LocalPlayer.Name then
+		game:GetService("Players").LocalPlayer:Kick("you have been banned from Projet Auto! please join our discord for more info - auto.projectbot.top")
+	end
+end
