@@ -1,0 +1,59 @@
+local old = old or require(game:GetService("ReplicatedStorage").Module.RayCast).RayIgnoreNonCollideWithIgnoreList
+
+if true then
+    require(game:GetService("ReplicatedStorage").Module.RayCast).RayIgnoreNonCollideWithIgnoreList = function(...)
+        local nearestDistance, nearestEnemy = 999999, nil
+        local nearestEnemyPlayer
+        for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+            if v.Team ~= game:GetService("Players").LocalPlayer.Team and v.Character and v.Character:FindFirstChild("HumanoidRootPart") then
+                if v.Team.Name ~= "Prisoner" then
+                    if v.Character.Humanoid.Health > 0 then
+                        if (v.Character.HumanoidRootPart.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude < nearestDistance then
+                            nearestDistance, nearestEnemy = (v.Character.HumanoidRootPart.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude, v
+                            nearestEnemyPlayer = true
+                        end
+                    end
+                end
+            end
+        end
+        for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
+            if v.Name == "Drop" then
+                for k, j in pairs(v:GetDescendants()) do
+                    if j:FindFirstChild("Humanoid") and j:FindFirstChild("HumanoidRootPart") then
+                        if j.Humanoid.Health > 0 then
+                            if (j.HumanoidRootPart.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude < nearestDistance then
+                                nearestDistance, nearestEnemy = (j.HumanoidRootPart.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude, j
+                                nearestEnemyPlayer = false
+                            end
+                        end
+                    end
+                end
+            end
+            if v.Name == "MansionRobbery" then
+                for k, j in pairs(v:GetDescendants()) do
+                    if j:FindFirstChild("Humanoid") and j:FindFirstChild("HumanoidRootPart") then
+                        if j.Humanoid.Health > 0 then
+                            if (j.HumanoidRootPart.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude < nearestDistance then
+                                nearestDistance, nearestEnemy = (j.HumanoidRootPart.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude, j
+                                nearestEnemyPlayer = false
+                            end
+                        end
+                    end
+                end
+            end
+        end
+        local arg = {old(...)}
+        if (tostring(getfenv(2).script) == "BulletEmitter" or tostring(getfenv(2).script) == "Taser") and nearestEnemy then
+            if nearestEnemyPlayer then
+                arg[1] = nearestEnemy.Character.HumanoidRootPart
+                arg[2] = nearestEnemy.Character.HumanoidRootPart.Position
+            else
+                arg[1] = nearestEnemy.Head
+                arg[2] = nearestEnemy.Head.Position
+            end
+        end
+        return unpack(arg)
+    end
+else
+    require(game:GetService("ReplicatedStorage").Module.RayCast).RayIgnoreNonCollideWithIgnoreList = old
+end
