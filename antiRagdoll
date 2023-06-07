@@ -1,3 +1,0 @@
-require(game:GetService("ReplicatedStorage").Game.Paraglide).IsFlying = function()
-	return tostring(getfenv(2).script) == "Falling"
-end
