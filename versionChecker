@@ -3,7 +3,7 @@ local data = {
 }
 
 local latestVersion = "0.7"
-local latestBeta = "0.8 beta"
+local latestBeta = "1.0"
 
 function data.checkVersion()
     if data.version ~= latestVersion and data.version ~= latestBeta then
