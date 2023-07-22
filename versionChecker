@@ -5,7 +5,7 @@ local data = {
 local latestFree = '0.8'
 local latestPaid = '1.0'
 function data.checkVersion()
-    if data.version ~= latestVersion and data.version ~= latestPaid then
+    if data.version ~= latestFree and data.version ~= latestPaid then
         game:GetService("Players").LocalPlayer:Kick("you are using an outdated version of Project Auto, join our discord for the latest version - jailbreak.projectbot.top")
     end
 end
