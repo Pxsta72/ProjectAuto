@@ -376,9 +376,9 @@ if executor ~= 'Hydrogen Mac v2' then
     end
 
 else
-    networkKeys['EquipGun'] = 'iio6lel2'
+    networkKeys['EquipGun'] = 'm1uikve0'
 
-    networkKeys['BuyGun'] = 'm1uikve0'
+    networkKeys['BuyGun'] = 'iio6lel2'
 
     networkKeys['Punch'] = 'clyaqd60'
 
