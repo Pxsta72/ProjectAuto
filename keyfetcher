@@ -1,7 +1,7 @@
 local executor = identifyexecutor()
 
 local networkKeys = {}
-local network = getupvalue(require(ReplicatedStorage.Module.AlexChassis).SetEvent, 1)
+local network = getupvalue(require(game:GetService('ReplicatedStorage').Module.AlexChassis).SetEvent, 1)
 
 if executor ~= 'Hydrogen Mac v2' then
     --// Check if already in env
