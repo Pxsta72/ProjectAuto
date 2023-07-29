@@ -389,6 +389,4 @@ else
     networkKeys['Taze'] = 'yvitldif'
 end
 
-for k, v in pairs(networkKeys) do
-    print(tostring(k)..': '..tostring(v))
-end
+return networkKeys, network
