@@ -1,14 +1,14 @@
+if networkKeys and network then 
+    return networkKeys, network
+end
+
 local executor = identifyexecutor()
 
 local networkKeys = {}
-local network = getupvalue(require(game:GetService('ReplicatedStorage').Module.AlexChassis).SetEvent, 1)
+local network = getupvalue(require(game:GetService("ReplicatedStorage").Module.AlexChassis).SetEvent, 1)
 
 if executor ~= 'Hydrogen Mac v2' then
     --// Check if already in env
-
-    if networkKeys and network then 
-        return networkKeys, network
-    end
 
     --// Variables 
 
@@ -376,9 +376,9 @@ if executor ~= 'Hydrogen Mac v2' then
     end
 
 else
-    networkKeys['EquipGun'] = 'm1uikve0'
+    networkKeys['EquipGun'] = 'iio6lel2'
 
-    networkKeys['BuyGun'] = 'iio6lel2'
+    networkKeys['BuyGun'] = 'm1uikve0'
 
     networkKeys['Punch'] = 'clyaqd60'
 
@@ -389,4 +389,6 @@ else
     networkKeys['Taze'] = 'yvitldif'
 end
 
-return networkKeys, network
+for k, v in pairs(networkKeys) do
+    print(tostring(k)..': '..tostring(v))
+end
