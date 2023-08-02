@@ -218,10 +218,10 @@ do -- arrest / pickpocket / breakout
 end
 
 do -- c4
+    local c4 = require(game:GetService("ReplicatedStorage").Game.Item.C4)
+    
     keyFunctions.C4 = function()
-        local c4 = require(game:GetService("ReplicatedStorage").Game.Item.C4)
-            return getconstant(c4.ShootBegin,72)
-        end
+        return getconstant(c4.ShootBegin,72)
     end
 end
 
