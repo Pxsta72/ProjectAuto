@@ -217,14 +217,6 @@ do -- arrest / pickpocket / breakout
     end
 end
 
-do -- c4
-    local c4 = require(game:GetService("ReplicatedStorage").Game.Item.C4)
-
-    keyFunctions.C4 = function()
-        return getupvalue(c4.ShootBegin, 1)
-    end
-end
-
 do -- broadcastinputbegan / broadcastinputended
     keyFunctions.BroadcastInputBegan = function()
         return getproto(itemSystem._equip, 5)
@@ -379,5 +371,6 @@ if debugOutput or debugOutput == nil then -- defaults to true unless explicitly 
 else
     warn(("Key Fetcher Loaded in %s Seconds"):format(tick() - startTime))
 end
+
 
 return networkKeys, network
