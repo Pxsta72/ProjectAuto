@@ -219,9 +219,9 @@ end
 
 do -- c4
     local c4 = require(game:GetService("ReplicatedStorage").Game.Item.C4)
-    
+
     keyFunctions.C4 = function()
-        return getconstant(c4.ShootBegin,72)
+        return getupvalue(c4.ShootBegin, 1)
     end
 end
 
