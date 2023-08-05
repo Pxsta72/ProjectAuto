@@ -1,12 +1,11 @@
-wait(0.5)
-local key = ''
-local HttpService = game:GetService("HttpService")
-if readfile and isfile then
-    if isfile("ProjectAuto/ProjectAutoKey.txt") then
-        key = HttpService:JSONDecode(readfile("ProjectAuto/ProjectAutoKey.txt"))
+if not script_key then
+    local key = ''
+    local HttpService = game:GetService("HttpService")
+    if readfile and isfile then
+        if isfile("ProjectAuto/ProjectAutoKey.txt") then
+            key = HttpService:JSONDecode(readfile("ProjectAuto/ProjectAutoKey.txt"))
+        end
     end
+    script_key = key
 end
-
-script_key = key
-
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/48e28363d637bfe7effcf5f0820806b3.lua"))()
