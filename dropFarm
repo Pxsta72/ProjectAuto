@@ -1,2 +1,1 @@
-wait(0.5)
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/48e28363d637bfe7effcf5f0820806b3.lua"))()
