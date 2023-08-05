@@ -1,3 +1,4 @@
+wait(0.5)
 local key = ''
 local HttpService = game:GetService("HttpService")
 if readfile and isfile then
