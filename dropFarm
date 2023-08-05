@@ -1,3 +1,13 @@
+local key = ''
+local HttpService = game:GetService("HttpService")
+if readfile and isfile then
+    if isfile("ProjectAuto/ProjectAutoKey.txt") then
+        key = HttpService:JSONDecode(readfile("ProjectAuto/ProjectAutoKey.txt"))
+    end
+end
+
+script_key = key
+
 ([[
                 This script has been licensed using Luarmor
             Unauthorized distribution of this script is forbidden.
