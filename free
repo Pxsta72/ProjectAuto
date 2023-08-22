@@ -1,1 +1,1 @@
-https://scripts.luawl.com/hosted/5558/21333/freeautorob.lua
+loadstring(game:HttpGet("https://scripts.luawl.com/hosted/5558/21333/freeautorob.lua"))()
