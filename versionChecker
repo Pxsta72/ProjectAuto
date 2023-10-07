@@ -2,8 +2,8 @@ local data = {
     version = nil
 }
 
-local latest = '2.4'
-local latestBeta = '3.0'
+local latest = '3.0'
+local latestBeta = '3.1'
 function data.checkVersion()
     if data.version ~= latest and data.version ~= latestBeta then
         game:GetService("Players").LocalPlayer:Kick("you are using an outdated version of Project Auto, join our discord for the latest version - dsc.projectauto.xyz")
