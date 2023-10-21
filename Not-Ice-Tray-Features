@@ -1,206 +1,266 @@
-Not Ice tray Featurs:
+------------------------------------------NOT ICETRAY FEATURES----------------------------------------------
 
-Player:
-  Main:
-    Inf Jump
-    Fast Punch
-    Inst Circle
-    Auto Key
-    Anti Ragdoll
-    Anti Fall Damage
-    Anti Parachute
-    Anti AFK
-    Flight (WIP)
-    Invis (DEV)
-  Player Movement:
-    No Crawl Cooldown
-    Always Juiced
-    No Roll Cooldown
-    Freeze Roll
-    Roll Duration Toggle
-    Roll Duration
-    Parachute On Key
-    Parachute Key
-    Glider On Key
-    Glider Key
+1)Player:
+   Main:
+    	Inf Jump
+    	Fast Punch
+    	Inst Circle
+    	Auto Key
+    	Anti Ragdoll
+    	Anti Fall Damage
+    	Anti Parachute
+    	Anti AFK
+    	Flight (WIP)
+    	Invis (DEV)
+
+   Player Movement:
+	No Crawl Cooldown
+   	Always Juiced
+  	No Roll Cooldown
+    	Freeze Roll
+    	Roll Duration Toggle
+    	Roll Duration
+   	Parachute On Key
+    	Parachute Key
+    	Glider On Key
+    	Glider Key
+
   Speed:
-    Toggled
-    Disable When Cuffed
-    Value (16 - 180)
-  Jump Power:
-    Toggled
-    Disable When Cuffed
-    Value (50 - 500)
-  World (LAG):
-    Anti Lasers
-    Anti Doors
-    Anti Weapons
-    Anti NPC
-    Anti Boss
+   	Toggled
+    	Disable When Cuffed
+    	Value (16 - 180)
+ 	Jump Power:
+    	Toggled
+    	Disable When Cuffed
+    	Value (50 - 500)
+
+  World:
+    	Anti Lasers
+    	Anti Doors
+   	Anti Weapons
+    	Anti NPC
+    	Anti Boss
+
   NoClip:
-    Toggled
-    NoClip Key
-    Set Y Level (TextBox)
+    	Toggled
+    	NoClip Key
+    	Set Y Level (TextBox)
+
   FOV:
-    Toggled
-    Value (50 - 120)
+    	Toggled
+   	Value (50 - 120)
+
   Other:
-    Reset
-    Choose Spawn
-    Open Cameras
-Combat: 
-  Silent Aim:
-    Toggled
-    Target Boss / NPC
-  Auras:
-    Arrest Aura
-    Eject Aura
-    Pick Pocket Aura
-  Guns:
-    Get All Guns
-    Get Gun (TextBox)
-    Loop Drop Guns (WIP)
-    Toggle Gun Store UI
-  Gun Mods:
-    Auto Fire
-    Anti Recoil
-    No Bullet Spread
-    Rapid Fire
-    Instant Reload
-Visual:
-  Markers:
-    Show All Player Markers
-  ESP Players:
-    Prisoners
-    Police
-    Criminals
-  ESP Settings:
-    Name ESP
-    Health ESP
-    Body ESP
-  Game Quality:
-    Low Quality Mode
-Vehicle:
-  Vehicle Flight:
-    Toggled
-    Faster Heli Flight
-    Speed
-    Toggle Flight Key (Keybind)
-  Vehicle Speed:
-    Toggled
-    Speed
-  Vehicle Mods:
-    Height Toggled
-    Height
-    Turn Speed Toggled
-    Turn Speed
-    Infinite Heli Height
-    Anti Break Vehicle
-  Rope Length:
-    Toggled
-    Value
-  Insta Rope Connect:
-    Toggled
-    Range
-  Other:
-    Inf Nitro
-    Vehicle Jump
-    Grab Heli
-    Fake Pro Garage
-    Fake Hypershift (Patched?)
-  Break Vehicles:
-    Loop Break Vehicles
-    Ignore Player Team
-    Ignore Empty Vehicles
-Robbery:
-  Robbery Status:
-    Mansion
-    Museum
-    Bank
-    Crater Bank
-    Jewelry Store
-    Casino
-    Tomb
-    Crate
-    Cargo Ship
-    Cargo Plane
-    Cargo Train
-    Passenger Train
-    Power Plant
-    Donut Store
-    Gas Station
-    Money Truck
-  Mansion:
-    Fast Mansion Complete
-  Museum:
-    Solve Puzzles
-    Break Puzzles
-  Casino:
-    Collect Cash Aura
-    Hack Computers Aura
-    Hack Vaults
-    Open Door
-  Passenger Train:
-    Collect Cash
-  Power Plant:
-    Auto Puzzle Solve
-  Plane:
-    Grab Crate
-  Ship:
-    Grab Crate
-    Sell Crate
-Teleport:
-  Player:
-    Museum
-    Mansion
-  Vehicle:
-    Museum
-    Bank
-    Crater Bank
-    Mansion
-    Jewelry
-    Tomb
-    Casino Vault
-    Casino Security
-  Heli TP:
-    Volcano Base
-    Select Player (DropDown)
-    Player
-  Insta TP (DEV):
-    Select Location (DropDown) {Bank, City Crim Base, Jewelry Store, City Garage, Gas Station, Donut Store, Town Garage, Town Gun Store, 1M Store, Volcano Base, Mansion, Museum, Casino Floor, Casino Security, Casino Vault, Tomb, City Gun Store}
-    Location
-    Select Plauer (DropDown)
-    Player
-    Custom Pos (TextBox)
-  Control Vehicles (DEV):
-    Control Vehicle
-    Select Player (DropDown)
-    Start Vehicle Control
-C4:
-  Main:
-    C4 Shape (DropDown) { dick, tower, custom (DEV) }
-    C4 CFrame (Custom Shape)
-    Torso Connect (Custom Shape)
-    Target Closest Player
-    Select Player (DropDown)
-    Detonate All C4
-    Attach C4
-Dev Tools: 
-  Pathing:
-    Show Path
-    Add Point
-    Remove Path
-    Copy Path
-    Copy Position
-  Locations:
-    Copy Bank Name
-    Copy Crater Bank Name
-    Copy Jewelry Name
-  Load Scripts:
-    Load Hash Spy
-    Load Dex
-    Load Simple Spy
-    Load Hydroxide
-Script:
-  Main:
-    Toggle UI
+    	Reset
+    	Choose Spawn
+    	Open Cameras
+
+2) Combat: 
+   Silent Aim:
+    	Toggled
+    	Target Boss / NPC
+
+   Auras:
+     	Arrest Aura
+    	Eject Aura
+    	Pick Pocket Aura
+
+   Guns:
+    	Get All Guns
+    	Get Gun (TextBox)
+    	Loop Drop Guns (WIP)
+    	Toggle Gun Store UI
+  
+   Gun Mods:
+   	Auto Fire
+    	Anti Recoil
+    	No Bullet Spread
+    	Rapid Fire
+    	Instant Reload
+
+ 3) Visual:
+     Markers:
+    	Show All Player Markers
+
+     ESP Players:
+    	Prisoners
+    	Police
+    	Criminals
+
+     ESP Settings:
+    	Name ESP
+    	Health ESP
+    	Body ESP
+
+    Game Quality:
+    	Low Quality Mode
+
+4) Vehicle:
+    Vehicle Flight:
+    	Toggled
+    	Faster Heli Flight
+    	Speed
+    	Toggle Flight Key (Keybind)
+
+    Vehicle Speed:
+    	Toggled
+    	Speed
+
+    Vehicle Mods:
+    	Height Toggled
+    	Height
+    	Turn Speed Toggled
+    	Turn Speed
+    	Infinite Heli Height
+    	Anti Break Vehicle
+
+    Rope Length:
+    	Toggled
+    	Value
+
+    Insta Rope Connect:
+    	Toggled
+    	Range
+
+    Other:
+    	Inf Nitro
+    	Vehicle Jump
+    	Grab Heli
+    	Fake Pro Garage
+    	Fake Hypershift
+
+    Break Vehicles:
+    	Loop Break Vehicles
+    	Ignore Player Team
+    	Ignore Empty Vehicles
+
+5) Robbery:
+    Robbery Status:
+    	Mansion
+    	Museum
+    	Bank
+    	Crater Bank
+    	Jewelry Store
+    	Casino
+    	Tomb
+    	Crate
+    	Cargo Ship
+    	Cargo Plane
+    	Cargo Train
+    	Passenger Train
+   	Power Plant
+    	Donut Store
+    	Gas Station
+    	Money Truck
+
+    Mansion:
+    	Fast Mansion Complete
+
+    Museum:
+    	Solve Puzzles
+    	Break Puzzles
+
+    Casino:
+    	Collect Cash Aura
+    	Hack Computers Aura
+    	Hack Vaults
+    	Open Door
+
+    Passenger Train:
+    	Collect Cash
+
+    Power Plant:
+    	Auto Puzzle Solve
+
+    Plane:
+    	Grab Crate
+
+    Ship:
+    	Grab Crate
+    	Sell Crate
+
+6) Teleport:
+    Player:
+    	Museum
+    	Mansion
+
+    Vehicle:
+    	Museum
+    	Bank
+    	Crater Bank
+    	Mansion
+    	Jewelry
+    	Tomb
+    	Casino Vault
+    	Casino Security
+
+    Heli TP:
+    	Volcano Base
+    	Select Player (DropDown)
+    	Player
+
+    Insta TP (DEVS ONLY):
+    	Select Location (DropDown) 
+	Bank 
+	City Crim Base
+	Jewelry Stores 
+	City Garage 
+	Gas Station 
+	Donut Store 
+	Town Garage 
+	Town Gun Store
+	1M Store 
+	Volcano Base 
+	Mansion
+	Museum
+	Casino Floor
+	Casino Securit
+	Casino Vault 
+	Tomb 
+	City Gun Store
+
+   Location
+    	Select Player (DropDown)
+    	Player
+    	Custom Pos (TextBox)
+
+   Control Vehicles (DEV):
+    	Control Vehicle
+    	Select Player (DropDown)
+    	Start Vehicle Control
+
+7) C4:
+    Main:	   
+    	C4 Shape (DropDown) { dick, tower, custom (DEV) }
+    	C4 CFrame (Custom Shape)
+    	Torso Connect (Custom Shape)
+    	Target Closest Player
+    	Select Player (DropDown)
+   	Detonate All C4
+   	Attach C4
+
+    Dev Tools: 
+    Pathing:
+    	Show Path
+    	Add Point
+    	Remove Path
+    	Copy Path
+    	Copy Position
+
+    Locations:
+    	Copy Bank Name
+    	Copy Crater Bank Name
+    	Copy Jewelry Name
+
+    Load Scripts:
+    	Load Hash Spy
+    	Load Dex
+    	Load Simple Spy
+    	Load Hydroxide
+
+8) Script:
+    Main:
+    	Toggle UI
+
+
+-----------------------------------------MORE FEATURES SOON :)-----------------------------------------
