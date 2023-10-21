@@ -239,7 +239,7 @@
    	Detonate All C4
    	Attach C4
 
-    Dev Tools: 
+8) Dev Tools: 
     Pathing:
     	Show Path
     	Add Point
@@ -258,7 +258,7 @@
     	Load Simple Spy
     	Load Hydroxide
 
-8) Script:
+9) Script:
     Main:
     	Toggle UI
 
