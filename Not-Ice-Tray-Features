@@ -96,7 +96,7 @@
     	Low Quality Mode
 
 4) Vehicle:
-    Vehicle Flight:
+    Vehicle Flight (WIP):
     	Toggled
     	Faster Heli Flight
     	Speed
@@ -127,7 +127,11 @@
     	Vehicle Jump
     	Grab Heli
     	Fake Pro Garage
-    	Fake Hypershift
+    	Fake Hypershift (patched?)
+	
+    JetPack:
+	Infinite Jetpack Fuel
+	Equip Jetpack
 
     Break Vehicles:
     	Loop Break Vehicles
@@ -200,36 +204,37 @@
     	Player
 
     Insta TP (DEVS ONLY):
-    	Select Location (DropDown) 
-	Bank 
-	City Crim Base
-	Jewelry Stores 
-	City Garage 
-	Gas Station 
-	Donut Store 
-	Town Garage 
-	Town Gun Store
-	1M Store 
-	Volcano Base 
-	Mansion
-	Museum
-	Casino Floor
-	Casino Securit
-	Casino Vault 
-	Tomb 
-	City Gun Store
-
-   Location
+    	Select Location (DropDown) {
+	    Bank 
+	    City Crim Base
+	    Jewelry Stores 
+	    City Garage 
+	    Gas Station 
+	    Donut Store 
+	    Town Garage 
+	    Town Gun Store
+	    1M Store 
+	    Volcano Base 
+	    Mansion
+	    Museum
+	    Casino Floor
+	    Casino Securit
+	    Casino Vault 
+	    Tomb 
+	    City Gun Store
+	}
+   	Location
     	Select Player (DropDown)
     	Player
     	Custom Pos (TextBox)
 
-   Control Vehicles (DEV):
+7) Control Vehicles (DEV, WIP):
+   Main:
     	Control Vehicle
     	Select Player (DropDown)
     	Start Vehicle Control
 
-7) C4:
+8) C4:
     Main:	   
     	C4 Shape (DropDown) { dick, tower, custom (DEV) }
     	C4 CFrame (Custom Shape)
@@ -239,7 +244,7 @@
    	Detonate All C4
    	Attach C4
 
-8) Dev Tools: 
+9) Dev Tools: 
     Pathing:
     	Show Path
     	Add Point
@@ -258,9 +263,16 @@
     	Load Simple Spy
     	Load Hydroxide
 
-9) Script:
+10) Script:
     Main:
     	Toggle UI
+    UI Presets:
+	Default
+	Cotton Candy
+	Dark Blue
+	Light Blue
+	Black
+	Red
 
 
 -----------------------------------------MORE FEATURES SOON :)-----------------------------------------
