@@ -1,1 +1,1 @@
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/18869ad3d4411bc2aafface65eb027ee.lua"))()
+game.Players.localPlayer:Kick('Outdated Script, Join discord.gg/projectauto For New One!')
