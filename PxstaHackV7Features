@@ -1,0 +1,364 @@
+player:
+    speed:
+        T toggled
+        T disable on cuff
+        S speed, 10-200, 16
+
+    infinite jump:
+        T toggled
+        T disable on cuff
+
+    jump power:
+        T toggled
+        T disable on cuff
+        S power, 20-500, 50
+
+    flight:
+        T toggled
+        S speed, 10-200, 16
+
+    disablers:
+        T anti arrest
+        T anti fall damage
+        T anti ragdoll
+        T anti taze
+        T anti parachute
+
+    utils:
+        T fake keycard
+        T instant circle
+        T no crawl cooldown
+        T always Juiced
+        S punch speed: 0-1, 0.5
+        B toggle parachute
+        B toggle glider
+
+    roll:
+        T no roll cooldown
+        T no roll velocity
+        S roll speed, 0.1-5, 0.3
+
+    donut:
+        T auto donut heal
+        B grab donut
+    
+    noclip:
+        B noclip forward
+        I y level
+        B noclip y
+
+    other:
+        B respawn
+        B choose spawn
+        T anti afk
+        T fe invisible
+        T become snake
+        T cover map
+
+    fov:
+        T toggled
+        S fov, 50-120, 70
+
+world:
+    disablers:
+        T disable damagers
+        T disable turrets
+        T disable spotlight
+
+    other
+        T render all players
+
+visual:
+    markers:
+        T teammate markers
+        T enemy markers
+        T crate markers
+        T npc markers
+        T ceo marker
+    
+    marker modifiers:
+        T criminal marker color
+        T bounty marker color
+
+    esp:
+        T show teammates
+        T show enemies
+        C teammate color
+        C enemy color
+
+    box esp:
+        T toggled
+
+    skeleton esp:
+        T toggled
+
+    text esp:
+        T show name
+        T show distance
+        C color
+
+    health esp:
+        T show health bar
+        T show health percent
+
+    tracers:
+        T toggled
+    
+    highlights:
+        T toggled
+        T show through walls
+    
+    spectate player:
+        D player, players
+        T toggle spectating
+
+combat:
+    silent aim:
+        T toggled
+        T instant hit
+        T target ceo
+        T target npcs
+        T respect walls
+        S max range, 100-1000, 600
+
+    silent aim fov:
+        T use fov
+        S fov range, 50-1000, 300
+        T show fov circle
+        C fov circle color
+
+    gun store:
+        T toggle gun store
+        T loop drop guns
+        T get all guns on spawn
+        B get all guns
+    
+    gun modifiers:
+        T auto fire
+        T anti recoil
+        T no bullet spread
+        T rapid fire
+        T shorter reload
+
+    rockets:
+        T loop explode
+        B rocket nuke
+        D target player, players
+        B follow player
+
+auras:
+    break aura:
+        T toggled
+        T break empty
+        T break teammates
+        S range, 100-600, 300
+    
+    arrest aura:
+        T toggled
+        T auto equip handcuffs
+        S range, 10-30, 30
+    
+    eject aura:
+        T toggled
+        S range, 10-30, 30
+    
+    taze aura:
+        T toggled
+        S range, 10-150, 100
+
+    pocket aura:
+        T toggled
+        S range, 10-64, 10
+    
+    breakout aura:
+        T toggled
+        S range, 10-30, 30
+
+    collect cash aura:
+        T toggled
+        S range, 10-30, 30
+
+vehicle:
+    vehicle flight:
+        T toggled
+        S speed, 100-600, 500
+    
+    heli flight:
+        T toggled
+        S speed, 100-10000, 5000
+
+    car modifiers:
+        T anti tire pop
+        T custom turn speed
+        S turn speed, 1-15, 1
+        T custom height
+        S heihgt, 3-300, 3
+
+    heli modifiers:
+        T anti heli break
+        T infinite heli height
+        T infinite drone height
+
+    utils:
+        T infinite nitro
+        T anti rope connect
+        T unlock all cosmetics
+
+    rope:
+        T instant rope connect
+        S connect distance, 20-150, 20
+        T custom rope length
+        S rope length, 3-500, 30
+    
+    vehicle control:
+        D player, players
+        B toggle control
+    
+    rope control:
+        T toggled
+        S control speed, 35-500, 35
+        K allow scrolling key, LeftControl
+
+robbery:
+    status:
+        L mansion
+        L museum
+        L bank
+        L crater bank
+        L jewelry store
+        L casino
+        L oil rig
+        L power plant
+        L tomb
+        L cargo ship
+        L cargo plane
+        L cargo train
+        L passenger train
+        L crates
+        L donut store
+        L gas station
+    
+    flow puzzle:
+        T auto solve
+        T instant solve
+
+    npcs:
+        T auto kill
+        T disable
+
+    mansion:
+        T disable ceo
+        T npc shoot ceo
+
+    museum:
+        T auto place tnt
+        T auto solve puzzle
+        T break puzzle
+        T collect items aura
+        S collect range, 10-30, 30
+
+    banks:
+        T auto open vault
+        T auto place dynamite
+
+    jewelry store:
+        T auto punch boxes
+        T collect jewel aura
+        S collect range, 10-30, 30
+
+    casino:
+        B show code
+        T auto open entrace
+        T auto call elevator
+        T auto open vault
+        T hack computers aura
+        S hack distance, 10-30, 30
+        T collect cash aura
+        S collect distance, 10-30, 30
+
+    oil rig:
+        T collect keycard aura
+        S collect range: 10-30, 30
+
+    tomb:
+        T collect gems aura
+        S collect range, 10-30, 30
+
+    cargo plane:
+        T collect crate aura
+        S collect range, 10-30, 30
+        T auto open door
+
+    cargo train:
+        T auto open vault
+        T auto open doors
+
+    passenger train:
+        T auto grab items
+
+    crates:
+        T auto open
+        S open distance, 10-30, 30
+
+    small stores:
+        T auto rob
+        S rob distance, 10-100, 10
+
+teleport:
+    player teleport:
+        D location, { middle, museum, mansion, airport, desert airport }
+        B teleport
+    
+    vehicle teleport:
+        D location, { mansion, museum, bank, crater bank, jewelry store, casino, casino security, casino vault, tomb, power plant, tomb town exit, tomb city exit, prison sewer }
+        B teleport
+    
+    instant teleport:
+        T teleport back on death
+        D location, { mansion, museum, bank, crater bank, jewelry store, casino, casino security, casino vault, tomb, power plant, tomb town exit, tomb city exit, oil rig, gas station, donut store, crate, prison, town gun store, city gun store, crater city gun store, town garage, city garage, crater city garage, 1m store, concept building, town house, city house, crater city house, desert house, ocean house }
+        B teleport to location
+        D player, players
+        B teleport to player
+        I coords
+        B teleport to coords 
+
+other:
+    anticheat:
+        T disable client anticheat
+
+    chat:
+        T see banned users
+        T see local tagged
+
+    c4:
+        T anti c4
+        T c4 surround
+        T c4 trail
+
+    crashers:
+        B crash1
+
+dev:
+    path:
+        T show path
+        B add point
+        B remove point
+        B clear path
+        B copy path
+
+    other:
+        B copy position
+        B copy jewelry floor
+        B copy bank layout
+        B copy crater bank layout
+        B copy hashes
+
+    scripts:
+        B load dex
+        B load simple spy
+        B load hydroxide
+
+ideas:
+
+barricde dangers? (platforms over dangers in robberies etc)
+add more crash methods
