@@ -1,30 +1,30 @@
 player:
-    speed:
+    0 speed:
         T toggled
-        T disable on cuff
+        T disable on arrest
         S speed, 10-200, 16
 
-    infinite jump:
+    0 infinite jump:
         T toggled
-        T disable on cuff
+        T disable on arrest
 
-    jump power:
+    0 jump power:
         T toggled
-        T disable on cuff
+        T disable on arrest
         S power, 20-500, 50
 
-    flight:
+    1 flight:
         T toggled
         S speed, 10-200, 16
 
-    disablers:
+    1 disablers:
         T anti arrest
+        T anti taze
         T anti fall damage
         T anti ragdoll
-        T anti taze
         T anti parachute
 
-    utils:
+    0 utils:
         T fake keycard
         T instant circle
         T no crawl cooldown
@@ -33,21 +33,21 @@ player:
         B toggle parachute
         B toggle glider
 
-    roll:
+    0 roll:
         T no roll cooldown
         T no roll velocity
-        S roll speed, 0.1-5, 0.3
+        S roll duration, 0.1-5, 0.3
 
-    donut:
+    1 donut:
         T auto donut heal
         B grab donut
     
-    noclip:
+    1 noclip:
         B noclip forward
         I y level
         B noclip y
 
-    other:
+    0 other:
         B respawn
         B choose spawn
         T anti afk
@@ -55,65 +55,66 @@ player:
         T become snake
         T cover map
 
-    fov:
+    1 fov:
         T toggled
         S fov, 50-120, 70
 
 world:
-    disablers:
+    0 disablers:
         T disable damagers
         T disable turrets
         T disable spotlight
 
-    other
+    1 other
         T render all players
+        T solid water
 
 visual:
-    markers:
-        T teammate markers
+    0 markers:
+        T team markers
         T enemy markers
         T crate markers
         T npc markers
         T ceo marker
     
-    marker modifiers:
+    0 marker modifiers:
         T criminal marker color
         T bounty marker color
 
-    esp:
-        T show teammates
+    1 esp:
+        T show team
         T show enemies
-        C teammate color
+        C team color
         C enemy color
 
-    box esp:
+    1 box esp:
         T toggled
 
-    skeleton esp:
+    1 skeleton esp:
         T toggled
 
-    text esp:
+    1 text esp:
         T show name
         T show distance
-        C color
+        T outline text
 
-    health esp:
+    1 health esp:
         T show health bar
         T show health percent
 
-    tracers:
+    0 tracers:
         T toggled
-    
-    highlights:
+
+    0 highlights:
         T toggled
         T show through walls
-    
-    spectate player:
+
+    0 spectate player:
         D player, players
         T toggle spectating
 
 combat:
-    silent aim:
+    0 silent aim:
         T toggled
         T instant hit
         T target ceo
@@ -121,106 +122,106 @@ combat:
         T respect walls
         S max range, 100-1000, 600
 
-    silent aim fov:
+    0 silent aim fov:
         T use fov
         S fov range, 50-1000, 300
         T show fov circle
-        C fov circle color
+        C circle color
 
-    gun store:
-        T toggle gun store
+    1 guns:
+        B toggle gun store
         T loop drop guns
         T get all guns on spawn
         B get all guns
     
-    gun modifiers:
+    1 gun modifiers:
         T auto fire
         T anti recoil
         T no bullet spread
         T rapid fire
-        T shorter reload
+        T fast reload
 
-    rockets:
+    0 rockets:
         T loop explode
+        S explosion range, 15-300, 100
         B rocket nuke
         D target player, players
-        B follow player
+        B trail player
 
 auras:
-    break aura:
+    0 break aura:
         T toggled
         T break empty
-        T break teammates
+        T break team
         S range, 100-600, 300
     
-    arrest aura:
+    1 arrest aura:
         T toggled
         T auto equip handcuffs
         S range, 10-30, 30
     
-    eject aura:
+    1 eject aura:
         T toggled
         S range, 10-30, 30
     
-    taze aura:
+    1 taze aura:
         T toggled
         S range, 10-150, 100
 
-    pocket aura:
+    0 pocket aura:
         T toggled
-        S range, 10-64, 10
+        S range, 10-50, 10
     
-    breakout aura:
+    0 breakout aura:
         T toggled
         S range, 10-30, 30
 
-    collect cash aura:
+    0 cash aura:
         T toggled
         S range, 10-30, 30
 
 vehicle:
-    vehicle flight:
+    0 vehicle flight:
         T toggled
         S speed, 100-600, 500
     
-    heli flight:
+    0 heli flight:
         T toggled
         S speed, 100-10000, 5000
 
-    car modifiers:
+    1 car modifiers:
         T anti tire pop
         T custom turn speed
         S turn speed, 1-15, 1
         T custom height
         S heihgt, 3-300, 3
 
-    heli modifiers:
-        T anti heli break
+    1 heli modifiers:
+        T anti break
         T infinite heli height
         T infinite drone height
 
-    utils:
+    0 utils:
         T infinite nitro
         T anti rope connect
         T unlock all cosmetics
 
-    rope:
+    0 rope:
         T instant rope connect
-        S connect distance, 20-150, 20
         T custom rope length
         S rope length, 3-500, 30
-    
-    vehicle control:
+
+    1 vehicle control:
         D player, players
         B toggle control
     
-    rope control:
+    0 rope control:
         T toggled
         S control speed, 35-500, 35
         K allow scrolling key, LeftControl
 
 robbery:
-    status:
+    0 status:
         L mansion
         L museum
         L bank
@@ -238,37 +239,37 @@ robbery:
         L donut store
         L gas station
     
-    flow puzzle:
+    1 flow puzzle:
         T auto solve
         T instant solve
 
-    npcs:
+    1 npcs:
         T auto kill
         T disable
 
-    mansion:
+    1 mansion:
         T disable ceo
         T npc shoot ceo
 
-    museum:
+    0 museum:
         T auto place tnt
         T auto solve puzzle
         T break puzzle
         T collect items aura
         S collect range, 10-30, 30
 
-    banks:
+    1 banks:
         T auto open vault
         T auto place dynamite
 
-    jewelry store:
+    0 jewelry store:
         T auto punch boxes
         T collect jewel aura
         S collect range, 10-30, 30
 
-    casino:
+    1 casino:
         B show code
-        T auto open entrace
+        T auto open entrance
         T auto call elevator
         T auto open vault
         T hack computers aura
@@ -276,45 +277,46 @@ robbery:
         T collect cash aura
         S collect distance, 10-30, 30
 
-    oil rig:
+    0 oil rig:
         T collect keycard aura
         S collect range: 10-30, 30
 
-    tomb:
-        T collect gems aura
+    1 tomb:
+        T collect gem aura
         S collect range, 10-30, 30
 
-    cargo plane:
+    0 cargo plane:
+        T auto open door
         T collect crate aura
         S collect range, 10-30, 30
-        T auto open door
 
-    cargo train:
+    1 cargo train:
         T auto open vault
         T auto open doors
 
-    passenger train:
-        T auto grab items
+    1 passenger train:
+        T collect item aura
+        S collect range, 10-100, 30
 
-    crates:
-        T auto open
+    0 crates:
+        T open aura
         S open distance, 10-30, 30
 
-    small stores:
+    0 small stores:
         T auto rob
         S rob distance, 10-100, 10
 
 teleport:
-    player teleport:
+    0 player teleport:
         D location, { middle, museum, mansion, airport, desert airport }
         B teleport
     
-    vehicle teleport:
+    0 vehicle teleport:
         D location, { mansion, museum, bank, crater bank, jewelry store, casino, casino security, casino vault, tomb, power plant, tomb town exit, tomb city exit, prison sewer }
         B teleport
     
-    instant teleport:
-        T teleport back on death
+    1 instant teleport:
+        T teleport back on respawn
         D location, { mansion, museum, bank, crater bank, jewelry store, casino, casino security, casino vault, tomb, power plant, tomb town exit, tomb city exit, oil rig, gas station, donut store, crate, prison, town gun store, city gun store, crater city gun store, town garage, city garage, crater city garage, 1m store, concept building, town house, city house, crater city house, desert house, ocean house }
         B teleport to location
         D player, players
@@ -323,37 +325,37 @@ teleport:
         B teleport to coords 
 
 other:
-    anticheat:
+    0 anticheat:
         T disable client anticheat
 
-    chat:
+    0 chat:
         T see banned users
         T see local tagged
 
-    c4:
+    1 c4:
         T anti c4
         T c4 surround
         T c4 trail
 
-    crashers:
+    1 crashes: -- crash names removed from this list
         B crash1
 
 dev:
-    path:
+    0 path:
         T show path
         B add point
         B remove point
         B clear path
         B copy path
 
-    other:
+    1 other:
         B copy position
         B copy jewelry floor
         B copy bank layout
         B copy crater bank layout
         B copy hashes
 
-    scripts:
+    0 scripts:
         B load dex
         B load simple spy
         B load hydroxide
@@ -362,3 +364,4 @@ ideas:
 
 barricde dangers? (platforms over dangers in robberies etc)
 add more crash methods
+"add to pxsta hack like tp player who u connected with heli rope to heaven fr" - Galvanized square steel
