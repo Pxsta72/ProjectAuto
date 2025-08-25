@@ -25,10 +25,13 @@ player:
         T anti parachute
 
     0 utils:
+        T anti anti arrest
+        T better respawn
+        T allow equip with crawl
         T fake keycard
         T instant circle
-        T no crawl cooldown
         T always Juiced
+        T no crawl cooldown
         S punch speed: 0-1, 0.5
         B toggle parachute
         B toggle glider
@@ -41,7 +44,7 @@ player:
     1 donut:
         T auto donut heal
         B grab donut
-    
+
     1 noclip:
         B noclip forward
         I y level
@@ -55,8 +58,11 @@ player:
         T become snake
         T cover map
 
-    1 fov:
-        T toggled
+    1 camera:
+        T freecam
+        T unlock camera
+        T noclip camera
+        T fov toggled
         S fov, 50-120, 70
 
 world:
@@ -65,9 +71,15 @@ world:
         T disable turrets
         T disable spotlight
 
-    1 other
+    0 other
         T render all players
+        T break all destructables
+        T loop errupt volcano
         T solid water
+        T anti void
+
+    1 bounties:
+        -- list of players and thier bounties here, sorted by bounty amount
 
 visual:
     0 markers:
@@ -120,6 +132,8 @@ combat:
         T target ceo
         T target npcs
         T respect walls
+        S hit chance, 0-1, 1
+        S headshot chance, 0-1, 1
         S max range, 100-1000, 600
 
     0 silent aim fov:
@@ -135,6 +149,7 @@ combat:
         B get all guns
     
     1 gun modifiers:
+        T always lunge sword
         T auto fire
         T anti recoil
         T no bullet spread
@@ -194,15 +209,26 @@ vehicle:
         T custom turn speed
         S turn speed, 1-15, 1
         T custom height
-        S heihgt, 3-300, 3
+        S height, 3-300, 3
+        T custom traction
+        S traction 0-1, 0.5
+        T custom engine power
+        S engine power 0-5, 0
+        T custom breaks
+        S break power, 0-1, 0
 
     1 heli modifiers:
+        T instant accellerate
         T anti break
         T infinite heli height
         T infinite drone height
 
+    1 boat modifiers:
+        T allow jetski on land
+
     0 utils:
         T infinite nitro
+        T infinite jetpack fuel
         T anti rope connect
         T unlock all cosmetics
 
@@ -244,6 +270,7 @@ robbery:
         T instant solve
 
     1 npcs:
+        T shoot others
         T auto kill
         T disable
 
@@ -271,6 +298,7 @@ robbery:
         B show code
         T auto open entrance
         T auto call elevator
+        T break elevator
         T auto open vault
         T hack computers aura
         S hack distance, 10-30, 30
@@ -316,6 +344,7 @@ teleport:
         B teleport
     
     1 instant teleport:
+        T teleport to waypoints
         T teleport back on respawn
         D location, { mansion, museum, bank, crater bank, jewelry store, casino, casino security, casino vault, tomb, power plant, tomb town exit, tomb city exit, oil rig, gas station, donut store, crate, prison, town gun store, city gun store, crater city gun store, town garage, city garage, crater city garage, 1m store, concept building, town house, city house, crater city house, desert house, ocean house }
         B teleport to location
@@ -365,3 +394,4 @@ ideas:
 barricde dangers? (platforms over dangers in robberies etc)
 add more crash methods
 "add to pxsta hack like tp player who u connected with heli rope to heaven fr" - Galvanized square steel
+spam sounds
