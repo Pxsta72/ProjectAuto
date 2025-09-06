@@ -1,6 +1,7 @@
 player:
     0 speed:
         T toggled
+        T require sprint
         T disable on arrest
         S speed, 10-200, 16
 
@@ -15,6 +16,7 @@ player:
 
     1 flight:
         T toggled
+        D mode { 1, 2 }
         S speed, 10-200, 16
 
     1 disablers:
@@ -27,7 +29,7 @@ player:
     0 utils:
         T anti anti arrest
         T better respawn
-        T allow equip with crawl
+        T no equip conditions
         T fake keycard
         T instant circle
         T always Juiced
@@ -56,7 +58,6 @@ player:
         T anti afk
         T fe invisible
         T become snake
-        T cover map
 
     1 camera:
         T freecam
@@ -76,7 +77,6 @@ world:
         T break all destructables
         T loop errupt volcano
         T solid water
-        T anti void
 
     1 bounties:
         -- list of players and thier bounties here, sorted by bounty amount
@@ -123,17 +123,16 @@ visual:
 
     0 spectate player:
         D player, players
-        T toggle spectating
+        B toggle spectating
 
 combat:
     0 silent aim:
         T toggled
-        T instant hit
         T target ceo
         T target npcs
         T respect walls
-        S hit chance, 0-1, 1
-        S headshot chance, 0-1, 1
+        S hit chance, 0-100, 100
+        S headshot chance, 0-100, 100
         S max range, 100-1000, 600
 
     0 silent aim fov:
@@ -159,9 +158,10 @@ combat:
     0 rockets:
         T loop explode
         S explosion range, 15-300, 100
-        B rocket nuke
-        D target player, players
+        T target closest player
+        D player, players
         B trail player
+        B stop trailing
 
 auras:
     0 break aura:
@@ -196,7 +196,7 @@ auras:
         S range, 10-30, 30
 
 vehicle:
-    0 vehicle flight:
+    0 car flight:
         T toggled
         S speed, 100-600, 500
     
@@ -207,18 +207,17 @@ vehicle:
     1 car modifiers:
         T anti tire pop
         T custom turn speed
-        S turn speed, 1-15, 1
+        S turn speed, 0.5-15, 1
         T custom height
-        S height, 3-300, 3
+        S height, 1-300, 3
         T custom traction
-        S traction 0-1, 0.5
+        S traction 0-1, 1
         T custom engine power
-        S engine power 0-5, 0
+        S engine power 1-15, 1
         T custom breaks
-        S break power, 0-1, 0
+        S break power, 1-10, 1
 
     1 heli modifiers:
-        T instant accellerate
         T anti break
         T infinite heli height
         T infinite drone height
@@ -227,12 +226,13 @@ vehicle:
         T allow jetski on land
 
     0 utils:
+        T auto flip
         T infinite nitro
         T infinite jetpack fuel
-        T anti rope connect
         T unlock all cosmetics
 
     0 rope:
+        T anti rope connect
         T instant rope connect
         T custom rope length
         S rope length, 3-500, 30
@@ -264,13 +264,14 @@ robbery:
         L crates
         L donut store
         L gas station
-    
+
     1 flow puzzle:
         T auto solve
         T instant solve
 
     1 npcs:
         T shoot others
+        S shoot max distance, 100-1000, 100
         T auto kill
         T disable
 
@@ -344,7 +345,7 @@ teleport:
         B teleport
     
     1 instant teleport:
-        T teleport to waypoints
+        T teleport to waypoint
         T teleport back on respawn
         D location, { mansion, museum, bank, crater bank, jewelry store, casino, casino security, casino vault, tomb, power plant, tomb town exit, tomb city exit, oil rig, gas station, donut store, crate, prison, town gun store, city gun store, crater city gun store, town garage, city garage, crater city garage, 1m store, concept building, town house, city house, crater city house, desert house, ocean house }
         B teleport to location
@@ -389,9 +390,29 @@ dev:
         B load simple spy
         B load hydroxide
 
+api:
+    0 settings:
+        T allow joins
+
+    0 users:
+        B name [hub name] -- green = online, red = offline. click = attempt join
+
+    1 chat:
+        I send message
+        -- chat messages
+
 ideas:
 
 barricde dangers? (platforms over dangers in robberies etc)
 add more crash methods
 "add to pxsta hack like tp player who u connected with heli rope to heaven fr" - Galvanized square steel
 spam sounds
+anti force field
+viusal stuff like color changers
+trash talk
+drive while garage open
+npc godmode
+cover map
+c4 block casino entrance
+add back buy safe gui
+instant accellerate
