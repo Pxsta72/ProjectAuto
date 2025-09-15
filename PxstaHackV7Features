@@ -60,6 +60,11 @@ player:
         T anti afk
         T fe invisible
         T become snake
+        S snake distance, 1-10, 1
+        S snake speed, 0.1-5, 1
+        T cover map
+        T cover map rotate
+        S cover map size, 10-10000, 10000
 
     1 camera:
         T freecam
@@ -377,6 +382,7 @@ other:
     0 utils:
         T disable client anticheat
         T add back buy safe gui
+        T spam sounds
 
     0 chat:
         T see banned users
@@ -385,8 +391,8 @@ other:
     1 c4:
         T anti c4
         T c4 surround
-        S surround radius
-        S surround rotate speed
+        S surround radius, 5-35, 10
+        S surround rotate speed, 0.5-10, 5
 
     1 crashes: -- crash names removed from this list
         B crash1
@@ -427,8 +433,3 @@ api:
         -- chat messages
 
 ideas:
-
-add more crash methods
-spam sounds
-cover map
-instant accellerate
