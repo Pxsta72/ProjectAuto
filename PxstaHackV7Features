@@ -25,6 +25,8 @@ player:
         T anti fall damage
         T anti ragdoll
         T anti parachute
+        T anti health slowdown
+        T anti arrest freeze
 
     0 utils:
         T anti anti arrest
@@ -68,6 +70,7 @@ player:
 
 world:
     0 disablers:
+        T disable door collisions
         T disable damagers
         T disable turrets
         T disable spotlight
@@ -96,8 +99,9 @@ visual:
     1 esp:
         T show team
         T show enemies
-        C team color
-        C enemy color
+        C prisoner color
+        C criminal color
+        C police color
 
     1 box esp:
         T toggled
@@ -144,10 +148,12 @@ combat:
     1 guns:
         B toggle gun store
         T loop drop guns
-        T get all guns on spawn
-        B get all guns
+        D guns, guns
+        T get guns on spawn
+        B get guns
     
     1 gun modifiers:
+        T anti forcefield
         T always lunge sword
         T auto fire
         T anti recoil
@@ -157,6 +163,8 @@ combat:
 
     0 rockets:
         T loop explode
+        B nuke
+        S nuke size, 10-500, 50
         S explosion range, 15-300, 100
         T target closest player
         D player, players
@@ -226,6 +234,7 @@ vehicle:
         T allow jetski on land
 
     0 utils:
+        T allow driving in garage
         T auto flip
         T infinite nitro
         T infinite jetpack fuel
@@ -270,8 +279,6 @@ robbery:
         T instant solve
 
     1 npcs:
-        T shoot others
-        S shoot max distance, 100-1000, 100
         T auto kill
         T disable
 
@@ -281,8 +288,10 @@ robbery:
 
     0 museum:
         T auto place tnt
+        T auto pull lever
         T auto solve puzzle
         T break puzzle
+        T auto shoot planets
         T collect items aura
         S collect range, 10-30, 30
 
@@ -309,6 +318,12 @@ robbery:
     0 oil rig:
         T collect keycard aura
         S collect range: 10-30, 30
+        T pull lever aura
+        S pull range: 10-30, 30
+        T place tnt aura
+        S place range: 10-30, 30
+        T explode barrel aura
+        S explode range: 50-300, 50
 
     1 tomb:
         T collect gem aura
@@ -322,10 +337,14 @@ robbery:
     1 cargo train:
         T auto open vault
         T auto open doors
+        S open distance 10-300, 100
 
     1 passenger train:
         T collect item aura
-        S collect range, 10-100, 30
+        S collect range, 10-300, 30
+        T auto break glass
+        T auto open doors
+        S open / break distance 10-300, 100
 
     0 crates:
         T open aura
@@ -345,9 +364,9 @@ teleport:
         B teleport
     
     1 instant teleport:
-        T teleport to waypoint
         T teleport back on respawn
-        D location, { mansion, museum, bank, crater bank, jewelry store, casino, casino security, casino vault, tomb, power plant, tomb town exit, tomb city exit, oil rig, gas station, donut store, crate, prison, town gun store, city gun store, crater city gun store, town garage, city garage, crater city garage, 1m store, concept building, town house, city house, crater city house, desert house, ocean house }
+        T teleport to waypoint
+        D location, { mansion, museum, bank, crater bank, jewelry store, casino, casino security, casino vault, tomb, power plant, oil rig, gas station, donut store, tomb town exit, tomb city exit, crate, prison, town gun store, city gun store, crater city gun store, town garage, city garage, crater city garage, 1m store, concept building, town house, city house, crater city house, desert house, ocean house }
         B teleport to location
         D player, players
         B teleport to player
@@ -355,8 +374,9 @@ teleport:
         B teleport to coords 
 
 other:
-    0 anticheat:
+    0 utils:
         T disable client anticheat
+        T add back buy safe gui
 
     0 chat:
         T see banned users
@@ -365,7 +385,8 @@ other:
     1 c4:
         T anti c4
         T c4 surround
-        T c4 trail
+        S surround radius
+        S surround rotate speed
 
     1 crashes: -- crash names removed from this list
         B crash1
@@ -377,18 +398,22 @@ dev:
         B remove point
         B clear path
         B copy path
+        B copy position
+        S position rounding, 0.01-1, 1
 
     1 other:
-        B copy position
-        B copy jewelry floor
-        B copy bank layout
-        B copy crater bank layout
+        B show jewelry floor
+        B show bank layout
+        B show crater bank layout
         B copy hashes
 
     0 scripts:
         B load dex
         B load simple spy
         B load hydroxide
+
+    1 stats:
+        -- script stats
 
 api:
     0 settings:
@@ -403,16 +428,7 @@ api:
 
 ideas:
 
-barricde dangers? (platforms over dangers in robberies etc)
 add more crash methods
-"add to pxsta hack like tp player who u connected with heli rope to heaven fr" - Galvanized square steel
 spam sounds
-anti force field
-viusal stuff like color changers
-trash talk
-drive while garage open
-npc godmode
 cover map
-c4 block casino entrance
-add back buy safe gui
 instant accellerate
