@@ -20,8 +20,8 @@ player:
         S speed, 10-200, 16
 
     1 disablers:
-        T anti arrest
-        T anti taze
+        T anti arrest [PAID]
+        T anti taze [PAID]
         T anti fall damage
         T anti ragdoll
         T anti parachute
@@ -29,8 +29,8 @@ player:
         T anti arrest freeze
 
     0 utils:
-        T anti anti arrest
-        T better respawn
+        T anti anti arrest [PAID]
+        T better respawn [PAID]
         T no equip conditions
         T fake keycard
         T instant circle
@@ -45,11 +45,11 @@ player:
         T no roll velocity
         S roll duration, 0.1-5, 0.3
 
-    1 donut:
+    1 donut: [PAID]
         T auto donut heal
         B grab donut
 
-    1 noclip:
+    1 noclip: [PAID]
         B noclip forward
         I y level
         B noclip y
@@ -58,13 +58,13 @@ player:
         B respawn
         B choose spawn
         T anti afk
-        T fe invisible
-        T become snake
-        S snake distance, 1-10, 1
-        S snake speed, 0.1-5, 1
-        T cover map
-        T cover map rotate
-        S cover map size, 10-10000, 10000
+        T fe invisible [PRIVATE]
+        T become snake [PRIVATE]
+        S snake distance, 1-10, 1 [PRIVATE]
+        S snake speed, 0.1-5, 1 [PRIVATE]
+        T cover map [PRIVATE]
+        T cover map rotate [PRIVATE]
+        S cover map size, 10-10000, 10000 [PRIVATE]
 
     1 camera:
         T freecam
@@ -96,7 +96,7 @@ visual:
         T crate markers
         T npc markers
         T ceo marker
-    
+
     0 marker modifiers:
         T criminal marker color
         T bounty marker color
@@ -139,9 +139,9 @@ combat:
         T toggled
         T target ceo
         T target npcs
-        T respect walls
-        S hit chance, 0-100, 100
-        S headshot chance, 0-100, 100
+        T respect walls [PAID]
+        S hit chance, 0-100, 100 [PAID]
+        S headshot chance, 0-100, 100 [PAID]
         S max range, 100-1000, 600
 
     0 silent aim fov:
@@ -156,7 +156,7 @@ combat:
         D guns, guns
         T get guns on spawn
         B get guns
-    
+
     1 gun modifiers:
         T anti forcefield
         T always lunge sword
@@ -166,7 +166,7 @@ combat:
         T rapid fire
         T fast reload
 
-    0 rockets:
+    0 rockets: [PRIVATE]
         T loop explode
         B nuke
         S nuke size, 10-500, 50
@@ -182,7 +182,7 @@ auras:
         T break empty
         T break team
         S range, 100-600, 300
-    
+
     1 arrest aura:
         T toggled
         T auto equip handcuffs
@@ -212,7 +212,7 @@ vehicle:
     0 car flight:
         T toggled
         S speed, 100-600, 500
-    
+
     0 heli flight:
         T toggled
         S speed, 100-10000, 5000
@@ -243,19 +243,21 @@ vehicle:
         T auto flip
         T infinite nitro
         T infinite jetpack fuel
-        T unlock all cosmetics
+        T unlock all cosmetics [PRIVATE]
+        T loop load saves [PRIVATE]
+        S loop load saves speed, 0.1-1, 0.5 [PRIVATE]
 
     0 rope:
-        T anti rope connect
+        T anti rope connect [PRIVATE]
         T instant rope connect
         T custom rope length
         S rope length, 3-500, 30
 
-    1 vehicle control:
+    1 vehicle control: [PRIVATE]
         D player, players
         B toggle control
-    
-    0 rope control:
+
+    0 rope control: [PRIVATE]
         T toggled
         S control speed, 35-500, 35
         K allow scrolling key, LeftControl
@@ -281,10 +283,10 @@ robbery:
 
     1 flow puzzle:
         T auto solve
-        T instant solve
+        T instant solve [PAID]
 
     1 npcs:
-        T auto kill
+        T auto kill [PAID]
         T disable
 
     1 mansion:
@@ -367,8 +369,8 @@ teleport:
     0 vehicle teleport:
         D location, { mansion, museum, bank, crater bank, jewelry store, casino, casino security, casino vault, tomb, power plant, tomb town exit, tomb city exit, prison sewer }
         B teleport
-    
-    1 instant teleport:
+
+    1 instant teleport: [PAID]
         T teleport back on respawn
         T teleport to waypoint
         D location, { mansion, museum, bank, crater bank, jewelry store, casino, casino security, casino vault, tomb, power plant, oil rig, gas station, donut store, tomb town exit, tomb city exit, crate, prison, town gun store, city gun store, crater city gun store, town garage, city garage, crater city garage, 1m store, concept building, town house, city house, crater city house, desert house, ocean house }
@@ -382,19 +384,22 @@ other:
     0 utils:
         T disable client anticheat
         T add back buy safe gui
-        T spam sounds
+        T spam sounds [PAID]
 
-    0 chat:
+    0 chat: [PAID]
         T see banned users
         T see local tagged
 
-    1 c4:
+    1 c4: [PRIVATE]
         T anti c4
-        T c4 surround
+        T target closest player
+        D player, players
+        T freeze player
+        T surround player
         S surround radius, 5-35, 10
         S surround rotate speed, 0.5-10, 5
 
-    1 crashes: -- crash names removed from this list
+    1 crashes: [PRIVATE] -- crash names removed from this list
         B crash1
 
 dev:
@@ -421,7 +426,7 @@ dev:
     1 stats:
         -- script stats
 
-api:
+api: [PRIVATE]
     0 settings:
         T allow joins
 
