@@ -381,5 +381,5 @@ dev:
         B load simple spy
         B load hydroxide
 
-    1 stats:
-        -- script stats
+    1 info:
+        -- script / user info
